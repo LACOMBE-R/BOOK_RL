@@ -6,25 +6,27 @@ title = "Télécommande IOT"
 weight = 1
 +++
 
-Faire entrer un ampli vieillissant dans le 21ème siècle en créant une télécommande infrarouge connectée
+Faire entrer un ampli vieillissant dans le 21ème siècle en créant une télécommande infrarouge connectée.
 <!--more-->
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+---
 
-A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+## Présentation
 
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2. Aliquam tincidunt mauris eu risus.
+Après avoir recupéré un ampli de la marque Onkyo, j'ai eu l'idée de concevoir un dispositif permettant de le connecter avec mon **système domotique DIY** (**[Home Assistant](https://www.home-assistant.io)**).  
+Dans l'idée, je souhaitais pouvoir contrôler mon ampli grâce a des **commandes vocales Google Home**, comme :
 
-> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+>***"Hey google, allume l'ampli"***  
+>***"OK google, augmente le volume de l'ampli"***  
+>***"Hey google, bascule l'entrée de l'ampli sur mon PC"***  
 
-## Header Level 2
+Pour cela, j'ai entamé une importante phase de **recherche** : La seule manière de contrôler l'ampli à distance est une **télécommande**, que je ne souhaitais pas acheter (beaucoup plus sympa de construire la mienne !). J'ai déterminé qu'il était possible de **simuler une télécommande** en utilisant une simple **LED infrarouge** connectée à un **micro-contrôleur** (ici un ESP-01).  
 
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+Il a ensuite fallu déterminer les codes à émettre pour chacune des touches dont j'avais besoin. Je m'en suis sorti grâce à la vaste librairie d'un **projet open-source** visant à recenser tout les codes infrarouges de commande en fonction des constructeurs (**[LIRC](https://www.lirc.org)**).  
 
-The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C'est encore une fois l'open source qui me sauve ! Le projet **[Tasmota](https://tasmota.github.io/docs/)** est un firmware modulaire et très facile d'installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d'une **LED infrarouge**, ainsi qu'une passerelle simplifiée avec **Home Assistant**.
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
+---
 
-When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then  
+Après prototypage, j'ai souhaité aller plus loin en m'essayant au **fraisage de PCB** (circuit imprimé).
+Une fois mon schéma électronique

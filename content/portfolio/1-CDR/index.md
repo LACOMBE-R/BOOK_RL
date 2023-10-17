@@ -1,6 +1,6 @@
 +++
 draft = false
-image = "/portfolio/1-cdr/CDR_Carousel/match_cdr_2023.jpg"
+image = "/img/portfolio/match_cdr_2023.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Coupe de France de Robotique"
 weight = -1
@@ -10,6 +10,7 @@ Un évènement exceptionnel, un cahier des charges stricte et 6 mois de créatio
 
 <!--more-->
 {{< carousel items="1" height="400" unit="px" duration="3000" data="CDR_Carousel" >}}
+
 ---
 
 📸 : [Alexandre Prouvost](https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAABxiIFkBtblVHnqbpmA1rnSBEohWrMPPLkc&keywords=alexandre%20prouvost&origin=RICH_QUERY_SUGGESTION&position=1&searchId=6f376a2d-c833-46a8-9358-90f01049af60&sid=kDo&spellCorrectionEnabled=false "Linkedin")
@@ -36,7 +37,7 @@ Cette vidéo est un **support de communication** que j'ai réalisé afin d'expli
 
 ### Aperçu
   
-{{< modelviewer >}}
+{{< modelviewer_CDR >}}
 
 ---
 
