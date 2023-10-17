@@ -5,12 +5,9 @@
 <div id="carousel{{ .Ordinal }}" class="carousel" duration="{{ .Get `duration` }}">
     <ul>
         {{ range $index, $slide := .Page.Resources.Match (print (.Get "data") "/*") }}
-        <li id="c{{ $.Scratch.Get ` ordinal` }}_slide{{ add $index 1}}" style="min-width: calc(100%/{{ $.Scratch.Get `
-            items` }}); padding-bottom: {{ $.Scratch.Get `height` }}{{ $.Scratch.Get `unit` }};"><img
-                src="{{ $slide }}" alt="" />
-            <div>
-                <!-- <div>{{ $slide }}</div> -->
-            </div>
+        <li id="c{{ $.Scratch.Get ` ordinal` }}_slide{{ add $index 1}}"
+            style="min-width: calc(100%/{{ $.Scratch.Get `items` }}); padding-bottom: {{ $.Scratch.Get `height` }}{{ $.Scratch.Get `unit` }};">
+            <img src="{{ $slide }}" alt="" />
         </li>
         {{ end }}
     </ul>
